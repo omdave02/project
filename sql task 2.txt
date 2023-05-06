@@ -1,0 +1,13 @@
+task 2
+
+(A)Select * from orders where amt > 1000;
+(b)Select sname, city from salepeople where comm > 0.10 and city = ‘London’;
+(c)Select sname, city from salespeople where city in (‘Barcelona’,’London’);
+(d)Select sname, comm from salespeople where comm > 0.10 and comm < 0.12;
+(e)Select cname from cust where city is null;
+(f)Select * from orders where odate in (‘03-OCT-94’,’04-OCT-94’);
+(g)Select cname from cust, orders where orders.cnum = cust.cnum and orders.snum in ( select snum from salespeople where sname in 'Peel','Motika');
+(h)Select cname from cust where cname like ‘A%’ or cname like ‘B%’;
+(i)Select cname from cust where rating <= 100 or city = ‘Rome’;
+(j)Select onum from orders where amt != 0 or amt is not null;
+(k)Select count(distinct snum)from orders;
