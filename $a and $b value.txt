@@ -1,0 +1,13 @@
+Q:-What will be the values of $a and $b after the code below is executed? 
+Explain your answer. 
+$a = '1'; 
+$b = &$a; 
+$b = "2$b";
+
+ans:- Both $a and $b will be equal to the string "21" after the above code is executed.
+
+Here’s why:
+
+The statement $b = &$a; sets $b equal to a reference to $a (as opposed to setting $b to the then-current value of $a). Thereafter, as long as $b remains a reference to $a, anything done to $a will affect $b and vice versa.
+
+So when we subsequently execute the statement $b = "2$b", $b is set equal to the string "2" followed by the then-current value of $b (which is the same as $a) which is 1, so this results in $b being set equal to the string "21" (i.e., the concatenation of "2" and "1"). And, since $b is a reference to $a, this has the same affect on the value of $a, so both end up equal to "21".

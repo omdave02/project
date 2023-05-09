@@ -1,0 +1,13 @@
+Q:-How can you declare the array (all type) in PHP? Explain with example Convert a JSON string to array.
+
+ans:- An array in PHP is a variable that we use to store a data set containing various elements. The elements of an array are identified by a unique key or index, which can be a number or a string. 
+PHP has two types of arrays: 
+(1) indexed arrays 
+(2)associative arrays.
+
+=>Converting JSON to PHP Array
+
+<?php
+   $json = '{"UK": "London", "ES": "Madrid", "IT": "Rome"}';
+   print_r (json_decode($json));
+?>
